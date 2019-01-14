@@ -28,8 +28,7 @@ class Card
 
   end
   def add_statement
-    @statement.prepend("#{time} || #{@amount_deposited} || #{@amount_withdrawn} || #{@balance}\n")
-
+    @statement.prepend("#{time} || #{@amount_deposited} || #{@amount_withdrawn} || #{@balance},\ne")
   end
 
   def prints_statement
@@ -39,7 +38,7 @@ class Card
         @amount_deposited = 0
     end
     puts "#{@header}"
-    puts "#{@statement}"
+    puts "#{@statement}".split(",").reverse
 
   end
 
