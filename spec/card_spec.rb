@@ -25,9 +25,9 @@ describe Card do
   it "time exists" do
     expect(subject.time)
   end
-  it "card can prints_statement nothing if no transactions" do
-    expect(subject.prints_statement).to eq nil
-
-  end
+  # it "card can prints_statement nothing if no transactions" do
+  #   expect(subject.prints_statement).to eq nil
+  #
+  # end
 
 end

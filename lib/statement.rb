@@ -1,9 +1,16 @@
-require "card"
+require_relative "card.rb"
 
 class Statement
-# 
-# def prints_statement
-#   puts Card.new."#{@header}"
-#   puts Card.new."#{@statement}".split(",").reverse
-# end
+  def initialize
+    @header = "date || credit || debit || balance"
+    @statement = ""
+
+  end
+
+  def print
+      puts "#{@header}"
+      puts "#{@statement}".split(",").reverse
+
+  end
+
 end

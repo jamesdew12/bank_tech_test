@@ -30,14 +30,9 @@ class Card
   def time
     Time.now.strftime("%d/%m/%Y ")
   end
+
   def add_statement
     @statement.prepend("#{time} || #{@amount_deposited} || #{@amount_withdrawn} || #{@balance},")
-  end
-
-  def prints_statement
-    puts "#{@header}"
-    puts "#{@statement}".split(",").reverse
-
   end
 
 end
