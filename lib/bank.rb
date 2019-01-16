@@ -12,10 +12,12 @@ class Bank
     @statement.print
   end
   def credit(amount)
+    fail "not a number" if amount.is_a? String
     @transaction.credit(amount)
     @statement.add_credit_statement(amount, balance)
   end
   def debit(amount)
+    raise 'cant withdraw negative number ' if amount < 0
     @transaction.debit(amount)
     @statement.add_debit_statement(amount, balance)
   end
