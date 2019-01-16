@@ -9,6 +9,12 @@ describe Bank do
   it "exists" do
     expect(subject)
   end
+  it 'calls credit with the amount described' do
+  amount = 10
+  expect(transaction).to receive(:credit).with(amount)
+  expect(statement).to receive(:add_credit_line).with(amount, '0.00')
+  bank.credit(amount)
+  end
 
 
 
