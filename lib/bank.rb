@@ -1,3 +1,7 @@
+require './lib/transaction'
+require './lib/statement'
+
+
 class Card
   attr_reader :balance
 
